@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tembusu Financial Services – AML Dealer Letter</title>
+<link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #e8e8e8;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 12pt;
+    color: #2E2E2E;
+    line-height: 1.6;
+    padding: 40px 20px;
+  }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    background: #ffffff;
+    margin: 0 auto;
+    padding: 18mm 20mm 18mm 20mm;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.13);
+    position: relative;
+  }
+
+  /* ── HEADER ── */
+  .letter-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-bottom: 2.5px solid #005a3d;
+    padding-bottom: 14px;
+    margin-bottom: 20px;
+  }
+
+  .logo-block img {
+    height: 44px;
+    display: block;
+  }
+
+  .company-details {
+    text-align: right;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 9pt;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  .company-details strong {
+    font-size: 10pt;
+    color: #005a3d;
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  /* ── DATE & RECIPIENT ── */
+  .meta {
+    margin-bottom: 22px;
+  }
+
+  .meta .date {
+    font-size: 10.5pt;
+    color: #555;
+    margin-bottom: 14px;
+  }
+
+  .recipient {
+    font-size: 10.5pt;
+    color: #2E2E2E;
+    line-height: 1.55;
+  }
+
+  /* ── SUBJECT LINE ── */
+  .subject-block {
+    background: #F5F0E8;
+    border-left: 4px solid #005a3d;
+    padding: 11px 16px;
+    margin-bottom: 22px;
+    border-radius: 0 4px 4px 0;
+  }
+
+  .subject-block p {
+    font-family: 'Vollkorn', Georgia, serif;
+    font-size: 13pt;
+    font-weight: 600;
+    color: #005a3d;
+    line-height: 1.4;
+  }
+
+  /* ── BODY PARAGRAPHS ── */
+  .letter-body p {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 11pt;
+    color: #2E2E2E;
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+
+  /* ── PRODUCT BOXES ── */
+  .product-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 20px 0 22px;
+  }
+
+  .product-card {
+    border: 1.5px solid #005a3d;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .product-card-header {
+    background: #005a3d;
+    color: #fff;
+    font-family: 'Vollkorn', Georgia, serif;
+    font-size: 12pt;
+    font-weight: 600;
+    padding: 9px 14px;
+    letter-spacing: 0.01em;
+  }
+
+  .product-card-body {
+    padding: 12px 14px;
+    font-size: 10.5pt;
+    line-height: 1.6;
+    color: #2E2E2E;
+    background: #fff;
+  }
+
+  .product-card-body ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .product-card-body ul li {
+    padding-left: 16px;
+    position: relative;
+    margin-bottom: 5px;
+  }
+
+  .product-card-body ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #005a3d;
+    font-weight: 700;
+    font-size: 10pt;
+  }
+
+  /* ── TIMELINE CALLOUT ── */
+  .timeline-box {
+    background: #b9e4d4;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin: 20px 0;
+  }
+
+  .timeline-box p.tl-title {
+    font-family: 'Vollkorn', Georgia, serif;
+    font-size: 12pt;
+    font-weight: 600;
+    color: #005a3d;
+    margin-bottom: 10px;
+  }
+
+  .timeline-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .timeline-box ul li {
+    font-size: 10.5pt;
+    color: #2E2E2E;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    line-height: 1.5;
+  }
+
+  .timeline-box ul li .tl-date {
+    background: #005a3d;
+    color: #fff;
+    font-weight: 600;
+    font-size: 9pt;
+    padding: 2px 8px;
+    border-radius: 3px;
+    white-space: nowrap;
+    margin-top: 1px;
+    flex-shrink: 0;
+  }
+
+  /* ── SIGN-OFF ── */
+  .signoff {
+    margin-top: 26px;
+    border-top: 1.5px solid #005a3d;
+    padding-top: 18px;
+  }
+
+  .signoff p {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 11pt;
+    color: #2E2E2E;
+    margin-bottom: 10px;
+    line-height: 1.65;
+  }
+
+  .contact-block {
+    margin-top: 16px;
+    background: #005a3d;
+    color: #fff;
+    border-radius: 6px;
+    padding: 14px 18px;
+    display: inline-block;
+    min-width: 260px;
+  }
+
+  .contact-block .co-name {
+    font-family: 'Vollkorn', Georgia, serif;
+    font-size: 13pt;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  .contact-block .co-contact {
+    font-size: 10.5pt;
+    line-height: 1.6;
+    opacity: 0.92;
+  }
+
+  .contact-block .co-contact a {
+    color: #b9e4d4;
+    text-decoration: none;
+  }
+
+  /* ── FOOTER ── */
+  .letter-footer {
+    margin-top: 28px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    font-size: 8.5pt;
+    color: #888;
+    text-align: center;
+    line-height: 1.55;
+  }
+
+  @media print {
+    body { background: #fff; padding: 0; }
+    .page { box-shadow: none; margin: 0; width: 100%; padding: 15mm 18mm; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="letter-header">
+    <div class="logo-block">
+      <!-- Logo placeholder – swap src to TembusuLogoLandscape.png in Webflow/production -->
+      <div style="font-family:'Vollkorn',Georgia,serif; font-size:20pt; font-weight:700; color:#005a3d; letter-spacing:-0.5px;">
+        Tembusu<span style="color:#2E2E2E; font-weight:400;"> Financial Services</span>
+      </div>
+      <div style="font-size:8.5pt; color:#888; margin-top:2px; font-family:'Inter',Arial,sans-serif;">
+        Licensed Moneylender · MinLaw Reg. No. 171/2024
+      </div>
+    </div>
+    <div class="company-details">
+      <strong>tembusufs.com</strong>
+      61 Ubi Avenue 2, #07-05<br />
+      Automobile Megamart<br />
+      Singapore 408898
+    </div>
+  </div>
+
+  <!-- DATE & RECIPIENT -->
+  <div class="meta">
+    <div class="date">26 March 2026</div>
+    <div class="recipient">
+      <strong>To All Used Car Dealers</strong><br />
+      Automobile Megamart (AML)<br />
+      61 Ubi Avenue 2, Singapore 408898
+    </div>
+  </div>
+
+  <!-- SUBJECT -->
+  <div class="subject-block">
+    <p>Lease Renewal &amp; Floor Stock Financing — A Timely Solution for AML Dealers</p>
+  </div>
+
+  <!-- BODY -->
+  <div class="letter-body">
+
+    <p>Dear Fellow Dealer,</p>
+
+    <p>
+      Together with my partners at <strong>Tembusu Financial Services</strong>,
+      we've had the pleasure of sharing this building with many of you — our history with AML
+      and its community of dealers goes back nearly two decades. Over the years, many of us
+      have crossed paths in the carpark, the corridors, and at the coffee shop downstairs.
+      It's been a long and good run together.
+    </p>
+
+    <p>
+      Which is why I'm writing to you directly, dealer to neighbour, about something I know is
+      on everyone's mind right now: <strong>the AML lease renewal coming up this July</strong>.
+    </p>
+
+    <!-- TIMELINE CALLOUT -->
+    <div class="timeline-box">
+      <p class="tl-title">Key Dates to Note</p>
+      <ul>
+        <li>
+          <span class="tl-date">17 April</span>
+          Deadline to accept SLA's offer and pay all sums (lease renewal premium, GST &amp; ancillary fees)
+        </li>
+        <li>
+          <span class="tl-date">18 July</span>
+          Current building lease expires
+        </li>
+        <li>
+          <span class="tl-date">19 July</span>
+          SLA issues fresh State Lease and Certificate of Title
+        </li>
+        <li>
+          <span class="tl-date">22 July</span>
+          Banks can begin lodging mortgages against the new SSCTs
+        </li>
+      </ul>
+    </div>
+
+    <p>
+      Here's the challenge: the renewal payment is due upfront, but bank financing against the
+      new title won't be available for roughly <strong>three months</strong> after that. In an
+      already tough year for used cars, that's a cashflow gap we'd like to help you bridge.
+    </p>
+
+    <p>
+      At Tembusu Financial Services, we offer two products that are directly relevant to what
+      you're dealing with right now:
+    </p>
+
+    <!-- PRODUCT CARDS -->
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="product-card-header">🏦 Lease Renewal Financing</div>
+        <div class="product-card-body">
+          <ul>
+            <li>Bridge the gap between your April payment deadline and July's new title</li>
+            <li>Borrow against your existing AML unit — fast, flexible process</li>
+            <li>Structured to tide you through until bank refinancing is possible in July</li>
+            <li>We assess your situation holistically — no cookie-cutter decisions</li>
+          </ul>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-card-header">🚗 Floor Stock Financing</div>
+        <div class="product-card-body">
+          <ul>
+            <li>Keep your showroom stocked without tying up working capital</li>
+            <li>Finance your vehicle inventory directly — free up cash for day-to-day ops</li>
+            <li>Flexible loan tenures to match your sales cycle</li>
+            <li>Fast approval and disbursement — so you don't miss a deal</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <p>
+      Unlike the banks, we can move quickly and work with your situation
+      as it stands <em>today</em> — not after all the paperwork has been sorted.
+      There are no broker fees or middlemen involved; you're dealing directly with us.
+    </p>
+
+    <p>
+      If you'd like to find out more — even just to understand your options — please don't
+      hesitate to reach out. A short conversation costs nothing, and it might make the
+      next few months a lot easier.
+    </p>
+
+  </div><!-- /letter-body -->
+
+  <!-- SIGN-OFF -->
+  <div class="signoff">
+    <p>
+      Warm regards,
+    </p>
+    <p style="margin-top: 6px; margin-bottom: 18px;">
+      <strong style="font-family:'Vollkorn',Georgia,serif; font-size:13pt; color:#005a3d;">Vincent</strong><br />
+      <span style="font-size:10pt; color:#555;">Co-founder, Tembusu Financial Services</span>
+    </p>
+
+    <div class="contact-block">
+      <div class="co-name">Tembusu Financial Services</div>
+      <div class="co-contact">
+        Vincent : <strong>9767 9995</strong><br />
+        <a href="https://www.tembusufs.com">www.tembusufs.com</a><br />
+        61 Ubi Avenue 2, #07-05, Singapore 408898
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="letter-footer">
+    Tembusu Financial Services is a licensed moneylender regulated by the Ministry of Law, Singapore (MinLaw).<br />
+    This letter is intended for the named recipient(s) only and does not constitute a binding offer of credit.
+    All financing is subject to approval and terms.
+  </div>
+
+</div><!-- /page -->
+</body>
+</html>
